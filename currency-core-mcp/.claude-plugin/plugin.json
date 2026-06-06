@@ -1,0 +1,19 @@
+{
+  "name": "currency-core-mcp",
+  "displayName": "CurrencyCore MCP",
+  "version": "1.0.0",
+  "description": "Connect Claude to the CurrencyCore API: live FX rates, any-pair conversion, PPP adjustment, and country/currency reference data — plus the API docs and guided prompts.",
+  "author": {
+    "name": "CurrencyCore",
+    "url": "https://currency-core.com"
+  },
+  "homepage": "https://currency-core.com",
+  "license": "MIT",
+  "keywords": ["mcp", "currency", "exchange-rates", "forex", "ppp", "finance"],
+  "mcpServers": {
+    "currency-core": {
+      "type": "http",
+      "url": "https://mcp.currency-core.com/mcp"
+    }
+  }
+}

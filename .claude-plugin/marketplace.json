@@ -1,0 +1,24 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "currencycore",
+  "owner": {
+    "name": "CurrencyCore",
+    "url": "https://currency-core.com"
+  },
+  "metadata": {
+    "description": "CurrencyCore Claude Code plugins",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "currency-core-mcp",
+      "source": "./currency-core-mcp",
+      "description": "FX rates, any-pair conversion, and PPP via the CurrencyCore MCP server.",
+      "version": "1.0.0",
+      "author": { "name": "CurrencyCore" },
+      "category": "finance",
+      "keywords": ["mcp", "currency", "exchange-rates", "forex", "ppp", "finance"],
+      "homepage": "https://currency-core.com"
+    }
+  ]
+}
