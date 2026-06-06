@@ -15,7 +15,6 @@ for other clients/registries, all pointing at the same remote server.
 - `get_rates` — full USD-base exchange-rate snapshot for a date
 - `get_rates_by_base` — the snapshot re-expressed against any base currency
 - `list_countries` — supported countries + their official currencies
-- `get_ppp` — purchasing-power-parity factor for a country/year
 
 **Resources** — the CurrencyCore API docs (readable in-client).
 **Prompts** — guided workflows (convert-with-PPP, compare cost-of-living, build a rate table, explain an error).
@@ -106,7 +105,7 @@ browser sign-in on first use.
 - **PPP conversions need a country on every currency**: pass `from=USD:USA` and `to=INR:IND` (a currency alone can't imply a country). `amount` defaults to `1`, so omit it to get the raw rate.
 - **Dates are UTC** and can't be in the future; omit `date` for the latest snapshot.
 - **Pick the right org at connect time** — the connection is bound to one organization; reconnect to switch. Usage/limits/billing apply to that org exactly like a normal API key.
-- **Turn it off any time** — disable MCP for an org from the CurrencyCore dashboard (Usage → MCP) to stop MCP traffic without revoking anything.
+- **Turn it off any time** — disable MCP for an org from the CurrencyCore dashboard (**Developer → *MCP server***) to stop MCP traffic without revoking anything.
 - **Ask in natural language** — e.g. *"Convert 250 USD to EUR and INR, PPP-adjusted for Germany and India"* or *"Which is cheaper for the same basket, USA or India?"* — the model will pick the right tools.
 
 ---
