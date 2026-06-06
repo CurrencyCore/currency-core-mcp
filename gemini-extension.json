@@ -1,0 +1,10 @@
+{
+  "name": "currency-core-mcp",
+  "version": "1.0.0",
+  "description": "Live FX rates, any-pair conversion, PPP adjustment, and country/currency reference data via the CurrencyCore MCP server.",
+  "mcpServers": {
+    "currency-core": {
+      "httpUrl": "https://mcp.currency-core.com/mcp"
+    }
+  }
+}
