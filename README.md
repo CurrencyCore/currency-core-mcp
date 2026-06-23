@@ -8,6 +8,9 @@ country/currency reference data — through the hosted MCP server at
 This repo is both a **Claude Code plugin + marketplace** and a set of manifests
 for other clients/registries, all pointing at the same remote server.
 
+- **Website:** https://currency-core.com
+- **Documentation:** https://currency-core.com/docs
+
 ## What you get
 
 **Tools**
@@ -34,6 +37,23 @@ claude plugin marketplace add CurrencyCore/currency-core-mcp
 claude plugin install currency-core-mcp@currencycore
 # in a session: /mcp → currency-core → Authenticate
 ```
+
+### Oh My Pi (omp)
+omp is Claude-Code-marketplace-compatible, so the same plugin installs straight from this repo:
+```bash
+omp plugin marketplace add CurrencyCore/currency-core-mcp
+omp plugin install currency-core-mcp@currencycore
+# first use opens a browser sign-in (or run: /mcp reauth currency-core)
+```
+…or add to `.omp/mcp.json` (project) / `~/.omp/agent/mcp.json` (user) — omp needs `"type": "http"`:
+```json
+{
+  "mcpServers": {
+    "currency-core": { "type": "http", "url": "https://mcp.currency-core.com/mcp" }
+  }
+}
+```
+> Same agent, two names: the `pi` lineage and the `omp` CLI share this config (`PI_PROFILE` / `OMP_PROFILE`); there is no separate `.pi` path.
 
 ### Cursor
 One-click: [**Add to Cursor**](https://cursor.com/install-mcp?name=currency-core&config=eyJ1cmwiOiJodHRwczovL21jcC5jdXJyZW5jeS1jb3JlLmNvbS9tY3AifQ==)
