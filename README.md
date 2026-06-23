@@ -30,7 +30,7 @@ dashboard any time).
 
 ### Claude Code
 ```bash
-claude plugin marketplace add logn10/currency-core-mcp
+claude plugin marketplace add CurrencyCore/currency-core-mcp
 claude plugin install currency-core-mcp@currencycore
 # in a session: /mcp → currency-core → Authenticate
 ```
@@ -60,7 +60,7 @@ Add to `.vscode/mcp.json` (or user `settings.json` under `"mcp"`):
 ### Gemini CLI
 As an extension (reads `gemini-extension.json` from this repo):
 ```bash
-gemini extensions install https://github.com/logn10/currency-core-mcp
+gemini extensions install https://github.com/CurrencyCore/currency-core-mcp
 ```
 …or add to `~/.gemini/settings.json` (Gemini uses `httpUrl` for streamable HTTP):
 ```json
@@ -91,7 +91,7 @@ browser sign-in on first use.
 
 - **Official MCP Registry** (`registry.modelcontextprotocol.io`) — publish [`server.json`](./server.json) with the `mcp-publisher` CLI:
   ```bash
-  npx -y @modelcontextprotocol/publisher login github   # verifies the io.github.logn10 namespace
+  npx -y @modelcontextprotocol/publisher login github   # verifies the io.github.currencycore namespace
   npx -y @modelcontextprotocol/publisher publish        # reads ./server.json
   ```
 - **Smithery** (`smithery.ai`) — submit the remote server via the Smithery site (their repo-based config is for servers Smithery builds/hosts; a hosted remote server is added through their UI).
