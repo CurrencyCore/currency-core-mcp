@@ -13,7 +13,7 @@
     {
       "name": "currency-core-mcp",
       "source": "./currency-core-mcp",
-      "description": "FX rates, any-pair conversion, and PPP via the CurrencyCore MCP server.",
+      "description": "FX rates, any-pair conversion, PPP, and historical analytics via the CurrencyCore MCP server.",
       "version": "1.0.0",
       "author": { "name": "CurrencyCore" },
       "category": "finance",

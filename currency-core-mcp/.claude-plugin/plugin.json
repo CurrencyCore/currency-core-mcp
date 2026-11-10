@@ -2,7 +2,7 @@
   "name": "currency-core-mcp",
   "displayName": "CurrencyCore MCP",
   "version": "1.0.0",
-  "description": "Connect Claude to the CurrencyCore API: live FX rates, any-pair conversion, PPP adjustment, and country/currency reference data — plus the API docs and guided prompts.",
+  "description": "Connect Claude to the CurrencyCore API: live FX rates, any-pair conversion, PPP adjustment, historical trend/volatility/correlation/drawdown/safe-haven analysis, country/currency reference data, the API docs, and the OpenAPI spec.",
   "author": {
     "name": "CurrencyCore",
     "url": "https://currency-core.com"

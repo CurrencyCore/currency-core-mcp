@@ -1,25 +1,41 @@
 # CurrencyCore MCP
 
 Connect any MCP-capable AI client to the **CurrencyCore API** — live FX rates,
-any-pair currency conversion, PPP (purchasing-power-parity) adjustment, and
-country/currency reference data — through the hosted MCP server at
-**`https://mcp.currency-core.com/mcp`**.
+any-pair currency conversion, PPP (purchasing-power-parity) adjustment,
+historical trend and risk analysis, and country/currency reference data — through
+the hosted MCP server at **`https://mcp.currency-core.com/mcp`**.
 
 This repo is both a **Claude Code plugin + marketplace** and a set of manifests
 for other clients/registries, all pointing at the same remote server.
 
 - **Website:** https://currency-core.com
-- **Documentation:** https://currency-core.com/docs
+- **Documentation:** https://currency-core.com/docs/mcp
+- **Server:** `https://mcp.currency-core.com/mcp`
+- **Version:** 1.0.0
 
 ## What you get
 
-**Tools**
+**Public reference tools — no authentication**
+- `list_countries` — supported countries + their official currencies
+- `list_currencies` — supported ISO 4217 codes, names, and symbols
+
+**Core tools — authorized connection, all plans**
 - `convert` — convert an amount between currencies, optionally PPP-adjusted (`from=USD:USA&to=INR:IND` style for PPP)
 - `get_rates` — full USD-base exchange-rate snapshot for a date
 - `get_rates_by_base` — the snapshot re-expressed against any base currency
-- `list_countries` — supported countries + their official currencies
+- `get_history` — historical rate time series (Free: last 30 days; paid: full history)
+- `get_ppp_factor` — a single country's IMF PPP conversion factor for a year
 
-**Resources** — the CurrencyCore API docs (readable in-client).
+**Analytics tools — Growth plan or higher**
+- `analyze_history` — trends, comparisons, movers, change %, volatility, high/low, trend series
+- `analyze_ppp` — IMF PPP factor change and trend over time
+- `analyze_volatility` — rank or compare currencies by annualized volatility
+- `analyze_correlation` — how closely currencies move together
+- `analyze_drawdown` — peak-to-trough decline and recovery speed
+- `analyze_safe_haven` — safe-haven scoring and ranking
+- `analyze_mean_reversion` — how strongly currencies revert to their historical mean
+
+**Resources** — the CurrencyCore API docs plus the OpenAPI 3.1 spec, readable in-client.
 **Prompts** — guided workflows (convert-with-PPP, compare cost-of-living, build a rate table, explain an error).
 
 The server uses **OAuth**: the first time you connect, your client opens a
@@ -109,11 +125,15 @@ browser sign-in on first use.
 
 ## Publish / list on registries
 
-- **Official MCP Registry** (`registry.modelcontextprotocol.io`) — publish [`server.json`](./server.json) with the `mcp-publisher` CLI:
+- **Official MCP Registry** (`registry.modelcontextprotocol.io`) — remote-only server, publish [`server.json`](./server.json) with the official `mcp-publisher` CLI:
   ```bash
-  npx -y @modelcontextprotocol/publisher login github   # verifies the io.github.currencycore namespace
-  npx -y @modelcontextprotocol/publisher publish        # reads ./server.json
+  # Install (macOS): brew install mcp-publisher
+  # Or download the release binary from github.com/modelcontextprotocol/registry/releases
+  mcp-publisher validate
+  mcp-publisher login github
+  mcp-publisher publish
   ```
+  GitHub auth verifies the `io.github.currencycore` namespace; no npm package is required for a remote-only server.
 - **Smithery** (`smithery.ai`) — submit the remote server via the Smithery site (their repo-based config is for servers Smithery builds/hosts; a hosted remote server is added through their UI).
 - **Directories** — list on **Glama** (`glama.ai/mcp`), **mcp.so**, **PulseMCP**, and open a PR to **`awesome-mcp-servers`**.
 - **Claude.ai / Claude Desktop connectors** — submit the remote server to Anthropic's connectors directory (this is exactly the remote-OAuth shape it expects).
@@ -156,3 +176,7 @@ marketplace entry, `server.json`, `gemini-extension.json`), commit, and push to
 Self-hosting or the API itself? See **https://currency-core.com** and the API
 docs. The MCP server is a thin proxy over the public API — every call respects
 the same auth, rate limits, and billing.
+
+## License
+
+MIT — see [LICENSE](./LICENSE).

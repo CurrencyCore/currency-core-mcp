@@ -1,12 +1,21 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.currencycore/currency-core-mcp",
-  "description": "Live FX rates, any-pair currency conversion, PPP adjustment, and country/currency reference data via the CurrencyCore API.",
+  "title": "CurrencyCore",
+  "description": "Live FX rates, conversion, IMF PPP, and historical currency analytics.",
   "version": "1.0.0",
+  "websiteUrl": "https://currency-core.com",
   "repository": {
     "url": "https://github.com/CurrencyCore/currency-core-mcp",
-    "source": "github"
+    "source": "github",
+    "id": "1261210951"
   },
+  "icons": [
+    {
+      "src": "https://currency-core.com/logo.png",
+      "mimeType": "image/png"
+    }
+  ],
   "remotes": [
     {
       "type": "streamable-http",
