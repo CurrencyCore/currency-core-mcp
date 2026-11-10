@@ -133,7 +133,7 @@ browser sign-in on first use.
   mcp-publisher login github
   mcp-publisher publish
   ```
-  GitHub auth verifies the `io.github.currencycore` namespace; no npm package is required for a remote-only server.
+  GitHub auth verifies the `io.github.CurrencyCore` namespace; no npm package is required for a remote-only server.
 - **Smithery** (`smithery.ai`) — submit the remote server via the Smithery site (their repo-based config is for servers Smithery builds/hosts; a hosted remote server is added through their UI).
 - **Directories** — list on **Glama** (`glama.ai/mcp`), **mcp.so**, **PulseMCP**, and open a PR to **`awesome-mcp-servers`**.
 - **Claude.ai / Claude Desktop connectors** — submit the remote server to Anthropic's connectors directory (this is exactly the remote-OAuth shape it expects).

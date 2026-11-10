@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.currencycore/currency-core-mcp",
+  "name": "io.github.CurrencyCore/currency-core-mcp",
   "title": "CurrencyCore",
   "description": "Live FX rates, conversion, IMF PPP, and historical currency analytics.",
   "version": "1.0.0",
