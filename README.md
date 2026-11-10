@@ -161,6 +161,7 @@ browser sign-in on first use.
 │       └── plugin.json           # Claude Code plugin (inline mcpServers, type: http)
 ├── server.json                   # Official MCP Registry manifest
 ├── gemini-extension.json         # Gemini CLI extension manifest
+├── glama.json                    # Glama ownership/claim metadata
 └── README.md
 ```
 
