@@ -1,5 +1,7 @@
 # CurrencyCore MCP
 
+[![CurrencyCore MCP connector](https://glama.ai/mcp/connectors/io.github.CurrencyCore/currency-core-mcp/badges/score.svg)](https://glama.ai/mcp/connectors/io.github.CurrencyCore/currency-core-mcp)
+
 Connect any MCP-capable AI client to the **CurrencyCore API** — live FX rates,
 any-pair currency conversion, PPP (purchasing-power-parity) adjustment,
 historical trend and risk analysis, and country/currency reference data — through
